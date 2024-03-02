@@ -1,2 +1,2 @@
 def get_common_formats(formats1, formats2):
-    pass
+    return set(formats1).intersection(formats2)
