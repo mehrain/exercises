@@ -1,4 +1,28 @@
-#Revisit this topic, took forever to understand the problem
+#my code
+def markdown_to_text(doc_content):
+    split_document = doc_content.split("\n")
+    new_document = []
+    for line in split_document:
+        if line.startswith("#"):
+            line = line.lstrip("#")
+        new_document.append(line)
+    joined_string = "\n".join(new_document)
+    return astrix_remover(joined_string)
+
+def astrix_remover(doc_content):
+    split_document = doc_content.split("\n")
+    new_document = []
+    for line in split_document:
+        split_line = line.split()
+        new_line = []
+        for word in split_line:
+            new_line.append(word.strip("*"))
+        new_document.append(" ".join(new_line))
+    return "\n".join(new_document)
+return "\n".join(new_document)
+
+#correct answer
+'''
 def markdown_to_text(doc_content):
     lines = doc_content.split("\n")
 
@@ -21,3 +45,4 @@ def remove_asterisks_from_words(line):
             continue
         new_words.append(word)
     return " ".join(new_words)
+    '''
