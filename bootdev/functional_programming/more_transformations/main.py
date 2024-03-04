@@ -1,5 +1,9 @@
 def doc_format_checker_and_converter(conversion_function, valid_formats):
-    return "test"
+    def file_checker(filename, content):
+        if filename.split(".")[-1] in valid_formats:
+            return conversion_function(content)
+        raise ValueError("Invalid file format")
+    return file_checker
 
 
 # Don't edit below this line
