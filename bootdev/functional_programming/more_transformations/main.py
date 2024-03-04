@@ -1,5 +1,5 @@
 def doc_format_checker_and_converter(conversion_function, valid_formats):
-    pass
+    return "test"
 
 
 # Don't edit below this line
