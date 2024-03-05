@@ -1,2 +1,7 @@
 def word_count_aggregator():
-    pass
+    wordcount = 0
+    def aggregator(sentence):
+        nonlocal wordcount
+        wordcount += len(sentence.split())
+        return wordcount
+    return aggregator
