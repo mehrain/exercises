@@ -1,6 +1,10 @@
 def args_logger(*args, **kwargs):
-    # ?
-
+    for arg in args:
+        print("* ", arg)
+    sorted_kwargs = sorted(kwargs.items())
+    for key, value in sorted_kwargs:
+        print("* ", key, ": ", value)
+        
 
 # Don't edit below this line
 
