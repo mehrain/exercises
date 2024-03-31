@@ -1,13 +1,14 @@
 def attack_action():
-    # ?
+    call(shoot_arrow)
+    call(calc_new_health)
 
 
 def shoot_arrow():
-    # ?
+    call(calc_damage)
 
 
 def calc_damage():
-    # ?
+    call(apply_damage)
 
 
 # don't touch below this line
