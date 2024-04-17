@@ -1,6 +1,7 @@
 class HashMap:
     def key_to_index(self, key):
-        pass
+        return sum(ord(c) for c in str(key)) % len(self.hashmap)
+        
 
     # don't touch below this line
 
