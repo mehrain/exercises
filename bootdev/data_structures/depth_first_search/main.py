@@ -1,18 +1,16 @@
 class Graph:
-    def breadth_first_search(self, v):
+    def depth_first_search(self, start_vertex):
         visited = []
-        queue = [v]
-        while queue:
-            vertex = queue.pop(0)
-            if vertex not in visited:
-                visited.append(vertex)
-                neighbors = sorted(self.graph[vertex])
-                for neighbor in neighbors:
-                    if neighbor not in visited and neighbor not in queue:
-                        queue.append(neighbor)
+        self.depth_first_search_r(visited, start_vertex)
         return visited
 
-    # don't touch below this line
+    def depth_first_search_r(self, visited, current_vertex):
+        visited.append(current_vertex)
+        for vertex in sorted(self.graph[current_vertex]):
+            if vertex not in visited:
+                self.depth_first_search_r(visited, vertex)
+
+        # don't touch below this line
 
     def __init__(self):
         self.graph = {}
