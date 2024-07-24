@@ -6,9 +6,9 @@ func main() {
 	const name = "Saul Goodman"
 	const openRate = 30.5
 
-	const msg = `hi &
+	// ?
+	msg := fmt.Sprintf("%v, your open rate is %v percent\n", name, openRate)
 	// don't edit below this line
 
 	fmt.Print(msg)
 }
-
